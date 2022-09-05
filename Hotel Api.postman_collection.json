@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "c5edf52b-237e-4499-82bf-be663c54d5fa",
+		"name": "Hotel Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17480785"
+	},
+	"item": [
+		{
+			"name": "Save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hid\": 2,\r\n    \"hotelName\": \"Ashoka\",\r\n    \"city\": \"Bangalore\",\r\n    \"createdAt\": \"2022-09-02\",\r\n    \"noOfRooms\": 300,\r\n    \"noOfTravelers\": 5,\r\n    \"wifi\": \"available\",\r\n    \"restaurant\": \"IndianStyle\",\r\n    \"airConditioning\": \"available\",\r\n    \"meals\": \"available\",\r\n    \"costOfStay\": 30000,\r\n    \"ratings\": 8,\r\n    \"reviews\": [\r\n        {\r\n            \"rid\": 5,\r\n            \"genderofReviewer\": \"Male\",\r\n            \"name\": \"Varun\",\r\n            \"cityofReviewer\": \"chennai\",\r\n            \"description\": \"Good\"\r\n        },\r\n         {\r\n            \"rid\": 6,\r\n            \"genderofReviewer\": \"Male\",\r\n            \"name\": \"shiva\",\r\n            \"cityofReviewer\": \"delhi\",\r\n            \"description\": \"Good\"\r\n        }\r\n      \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9096/hotel/save",
+					"host": [
+						"localhost"
+					],
+					"port": "9096",
+					"path": [
+						"hotel",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hid\": 2,\r\n    \"hotelName\": \"Ashoka\",\r\n    \"city\": \"Bangalore\",\r\n    \"createdAt\": \"2022-09-02\",\r\n    \"noOfRooms\": 300,\r\n    \"noOfTravelers\": 5,\r\n    \"wifi\": \"available\",\r\n    \"restaurant\": \"IndianStyle\",\r\n    \"airConditioning\": \"available\",\r\n    \"meals\": \"available\",\r\n    \"costOfStay\": 30000,\r\n    \"ratings\": 8,\r\n    \"reviews\": [\r\n        {\r\n            \"rid\": 5,\r\n            \"genderofReviewer\": \"Male\",\r\n            \"name\": \"Varun\",\r\n            \"cityofReviewer\": \"chennai\",\r\n            \"description\": \"Good\"\r\n        },\r\n         {\r\n            \"rid\": 6,\r\n            \"genderofReviewer\": \"Male\",\r\n            \"name\": \"suresh\",\r\n            \"cityofReviewer\": \"delhi\",\r\n            \"description\": \"Good\"\r\n        }\r\n      \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9096/hotel/update",
+					"host": [
+						"localhost"
+					],
+					"port": "9096",
+					"path": [
+						"hotel",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "review",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"reviews\": [\r\n    {\r\n        \"reviewId\": 1,\r\n        \"genderofReviewer\": \"Male\",\r\n        \"name\": \"Jagadish\",\r\n        \"cityofReviewer\": \"Bangalore\",\r\n        \"description\": \"Good\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:9096/hotel/5",
+					"host": [
+						"localhost"
+					],
+					"port": "9096",
+					"path": [
+						"hotel",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9096/hotel/all",
+					"host": [
+						"localhost"
+					],
+					"port": "9096",
+					"path": [
+						"hotel",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9096/hotel/100",
+					"host": [
+						"localhost"
+					],
+					"port": "9096",
+					"path": [
+						"hotel",
+						"100"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
